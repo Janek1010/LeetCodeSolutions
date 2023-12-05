@@ -1,19 +1,48 @@
 package org.example;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+/***
+ * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+ * An input string is valid if:
+ *
+ * Open brackets must be closed by the same type of brackets.
+ * Open brackets must be closed in the correct order.
+ * Every close bracket has a corresponding open bracket of the same type.
+ *
+ *
+ * Example 1:
+ *
+ * Input: s = "()"
+ * Output: true
+ * Example 2:
+ *
+ * Input: s = "()[]{}"
+ * Output: true
+ * Example 3:
+ *
+ * Input: s = "(]"
+ * Output: false
+ *
+ *
+ * Constraints:
+ *
+ * 1 <= s.length <= 104
+ * s consists of parentheses only '()[]{}'.
+ */
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println(isValid("()"));
+        System.out.println(isValid("()[]{}"));
+        System.out.println(isValid("(]"));
+    }
+    public static boolean isValid(String s) {
+        char[] chars = s.toCharArray();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        /***
+         * jakby w zeszycie mam ze one sie zamykaja ze biore ten zamykajacy  i jesli odejme od niego indeks tego pcozatkowego ktorego musze znalezc ale wiem ze gdzies jet
+         * to wtedy jesli liczba wynosi 1,3 lub 5 to jest git zamkniecie
+         */
+        for (int i = 0; i < chars.length; i++) {
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
         }
     }
 }
