@@ -52,9 +52,9 @@ public class Main {
     public static int[] twoSum(int[] nums, int target) {
         int[] output = {0,0};
 
-        //Value, Index
         HashMap<Integer,Integer> difference= new HashMap<>();
         int diff;
+
         for (int i = 0; i < nums.length; i++) {
             diff = target - nums[i];
 
