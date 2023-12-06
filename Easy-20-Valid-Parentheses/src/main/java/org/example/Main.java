@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Stack;
+
 /***
  * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
  * An input string is valid if:
@@ -30,19 +32,26 @@ package org.example;
  */
 public class Main {
     public static void main(String[] args) {
+        System.out.println(isValid("[({])}")); // expected false
+        System.out.println(isValid("{[]}")); // expected true
         System.out.println(isValid("()"));
         System.out.println(isValid("()[]{}"));
         System.out.println(isValid("(]"));
     }
     public static boolean isValid(String s) {
-        char[] chars = s.toCharArray();
+        Stack<Character> stack = new Stack<>();
 
-        /***
-         * jakby w zeszycie mam ze one sie zamykaja ze biore ten zamykajacy  i jesli odejme od niego indeks tego pcozatkowego ktorego musze znalezc ale wiem ze gdzies jet
-         * to wtedy jesli liczba wynosi 1,3 lub 5 to jest git zamkniecie
-         */
-        for (int i = 0; i < chars.length; i++) {
-
+        for (char c :s.toCharArray()) {
+            if (c == '('){
+                stack.push(')');
+            } else if (c == '{') {
+                stack.push('}');
+            }else if (c == '[') {
+                stack.push(']');
+            } else if (stack.empty() || stack.pop() != c) {
+                return false;
+            }
         }
+        return stack.empty();
     }
 }
