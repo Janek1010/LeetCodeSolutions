@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Easy-21-Merge-Two-Sorted-Lists" />
         <module name="Easy-1-TwoSum" />
+        <module name="Easy-704-BinarySearch" />
         <module name="Easy-20-Valid-Parentheses" />
         <module name="Easy-242-ValidAnagram" />
       </profile>
