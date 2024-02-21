@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 
 /**
@@ -31,17 +33,11 @@ public class Main {
         System.out.println(isAnagram("anagram","nagaram"));
     }
     public static boolean isAnagram(String s, String t) {
-        StringBuilder str1 = new StringBuilder(s);
-        for (char ch : t.toCharArray()){
-             Integer indexOf = str1.indexOf(String.valueOf(ch));
-             if (indexOf == -1){
-                 return false;
-             }
-             str1.deleteCharAt(indexOf);
-        }
-        if (str1.isEmpty()) return true;
+        char[] ss = s.toCharArray();
+        char[] tt = t.toCharArray();
+        Arrays.sort(ss);
+        Arrays.sort(tt);
 
-        return false;
-
+        return Arrays.equals(ss,tt);
     }
 }

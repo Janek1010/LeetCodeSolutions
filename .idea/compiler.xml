@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Easy-21-Merge-Two-Sorted-Lists" />
+        <module name="Easy-1-TwoSum" />
+        <module name="Easy-20-Valid-Parentheses" />
+        <module name="Easy-242-ValidAnagram" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
