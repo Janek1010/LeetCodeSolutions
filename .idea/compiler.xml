@@ -11,6 +11,7 @@
         <module name="Easy-704-BinarySearch" />
         <module name="Easy-20-Valid-Parentheses" />
         <module name="Easy-242-ValidAnagram" />
+        <module name="Easy-733-FloodFill" />
       </profile>
     </annotationProcessing>
   </component>
